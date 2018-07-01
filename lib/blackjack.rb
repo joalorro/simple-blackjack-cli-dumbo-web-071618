@@ -66,7 +66,7 @@ def runner
     addToSum = hit?(sum)
     
     if beforeHit < addToSum
-      sum += addToSum
+      sum = addToSum
     else
       sum = beforeHit
     end

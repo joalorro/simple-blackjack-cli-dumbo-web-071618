@@ -40,13 +40,13 @@ def hit?(sum)
   command = get_user_input
   
   if command == "h"
-    addToSum = deal_card
+    sum += deal_card
   elsif command == "s"
-    
+    return sum
   else 
-    
+    return sum
   end
-  return sum += addToSum
+  
 end
 
 def invalid_command
@@ -62,8 +62,15 @@ def runner
   sum = initial_round
   until sum > 21
     #sum is being added to itself b/c return statements from the #hit method are integers
+    beforeHit = sum
     addToSum = hit?(sum)
-    sum += addToSum
+    
+    if beforeHit < addToSum
+      sum += addToSum
+    else
+      sum = beforeHit
+    end
+    
     display_card_total(sum)
   
   end

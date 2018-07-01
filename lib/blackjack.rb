@@ -43,9 +43,9 @@ def hit?(sum)
     sum += deal_card
     return sum
   elsif command == "s"
-    return sum
+    return 0
   else 
-    return sum
+    return 0
   end
   
 end

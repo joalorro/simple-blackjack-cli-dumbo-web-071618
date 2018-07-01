@@ -40,7 +40,7 @@ def hit?(sum)
   command = get_user_input
   
   if command == "h"
-    return deal_card
+    deal_card
   elsif command == "s"
     return 0
   else 

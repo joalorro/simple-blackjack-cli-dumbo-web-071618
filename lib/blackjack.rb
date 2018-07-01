@@ -40,13 +40,13 @@ def hit?(sum)
   command = get_user_input
   
   if command == "h"
-    deal_card
+    addToSum = deal_card
   elsif command == "s"
-    return 0
+    
   else 
-    return 0
+    
   end
-  
+  return sum += addToSum
 end
 
 def invalid_command

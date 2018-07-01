@@ -63,7 +63,7 @@ def runner
   sum = initial_round
   until sum > 21
     #sum is being added to itself b/c return statements from the #hit method are integers
-    sum += hit?(sum)
+    sum = hit?(sum)
     display_card_total(sum)
   
   end
